@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../css/hstl.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Hostels</title>
+  </head>
+  <body>
+    <div class="hstl-container">
+      <div class="sidepane">
+        <div class="searchbar">
+          <i
+            class="fa-solid fa-magnifying-glass fa-beat"
+            style="color: #111212"
+          ></i>
+          <input type="text" id="search" placeholder="Search for hostels" />
+        </div>
+        <div class="gender">
+          <div><h3>Gender :</h3></div>
+          <div>
+            <input type="radio" name="gender" value="1" ,true />
+            <i class="fa fa-male" aria-hidden="true"></i> Male
+          </div>
+          <div>
+            <input type="radio" name="gender" value="2" />
+            <i class="fas fa-female"></i> Female
+          </div>
+        </div>
+        <div class="categories">
+          <h3>Categories :</h3>
+          <label><input type="checkbox" /> Hostel</label>
+          <label><input type="checkbox" /> Guest-ins</label>        </div>
+        <div class="fee">
+          <h3>Prices :</h3>
+          <label><input type="checkbox" /> Rs. 9000-10,000</label>
+          <label><input type="checkbox" /> Rs. 8000-9000</label>
+          <label><input type="checkbox" /> Rs. 7000-8000</label>
+          <label><input type="checkbox" /> Rs. 6000-7000</label>
+          <label><input type="checkbox" /> Rs. 5000-6000</label>
+        </div>
+        <div class="filter-star">
+          <h3>Star Rating</h3>
+          <label class="star-rating">
+            <input type="checkbox" />
+            <span class="stars">★★★★★</span>
+            <span class="count">(68)</span>
+          </label>
+          <label class="star-rating">
+            <input type="checkbox" />
+            <span class="stars">★★★★☆</span>
+            <span class="count">(282)</span>
+          </label>
+          <label class="star-rating">
+            <input type="checkbox" />
+            <span class="stars">★★★☆☆</span>
+            <span class="count">(1054)</span>
+          </label>
+          <label class="star-rating">
+            <input type="checkbox" />
+            <span class="stars">★★☆☆☆</span>
+            <span class="count">(304)</span>
+          </label>
+          <label class="star-rating">
+            <input type="checkbox" />
+            <span class="stars">★☆☆☆☆</span>
+            <span class="count">(61)</span>
+          </label>
+        </div>
+      </div>
+      <div class="middlepane">
+        <div class="sort-container">
+          <span class="sort-label">Sort by</span>
+          <div class="sort-buttons">
+            <button class="button-value" onclick="filterProduct(this)">Best match</button>
+            <button class="button-value"  onclick="filterProduct(this)">Top reviewed</button>
+            <button class="button-value"  onclick="filterProduct(this)">Lowest price first</button>
+            <button class="button-value"  onclick="filterProduct(this)">Highest price first</button>
+            <button class="button-value"  onclick="filterProduct(this)">Hot Deals!</button>
+          </div>
+          <a href="watchlist.html">
+            <i class='bx bx-list-plus'></i>
+        </a>
+        </div>
+        <div class="hstldetails js-hstldetails">
+        </div>
+      </div>
+    </div>
+   
+    <script type="module" src="../scripts/hostels.js"></script>
+    <script type="module" src="../scripts/filters.js"></script>
+  </body>
+</html>

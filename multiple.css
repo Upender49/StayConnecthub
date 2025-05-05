@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    background: url("../images/ownerbackground.jpg") no-repeat center center/cover;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.container {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Blurs the background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    border-radius: 7px;
+    /* background-color:aliceblue; */
+    margin-top: 130px;
+    height: 500px;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 150px;
+    /* background: url('background.webp') no-repeat center center/cover; */
+    /* filter: blur(8px); */
+    background-size: cover;
+    background-position: center;
+}
+
+
+h2 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.section {
+    position: absolute;
+    /* width: 100%;
+    height: 100%; */
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.section.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.section.previous {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.section.next {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color:aliceblue ;
+    color: blueviolet;
+}
+.inputbox{
+    width: 340px;
+    /* height: 60px; */
+    border-bottom: 2px solid #e4e4e4;
+    margin: 10px 0;
+}
+
+
+.inputbox input{
+    width: 100%;
+    height: 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    /* margin-left: 10px; */
+    margin-top: 20px;
+    font-size: 16px;
+    color: black;
+    font-weight: 500;
+}
+
+.inputbox input,
+.inputbox select,
+.inputbox textarea {
+    width: 100%;
+    padding: 4px; /* Add padding to make the input more comfortable */
+    background: transparent;
+    border: 2px solid rgba(66, 63, 63, 0.715);
+    outline: none;
+    font-size: 16px;
+    color: black;
+    font-weight: 500;
+    border-radius: 4px; /* Slightly rounded corners */
+    margin-top: 5px; /* Reduced space between label and input */
+}
+.btn {
+    margin: 20px;
+}
+.prev-btn {
+    margin-right: 10px;
+}
+#hostel-description{
+   width: 340px;
+}
+#landmarks{
+    margin-top: 50px;
+}
+.landtag{
+    margin: top 0;
+}
+.inputbox input[type="checkbox"] {
+    margin-right: 10px; 
+}
+/* .inputbox label {
+    font-size: 14px;
+    line-height: 1.5;
+} */
+
+.error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ef9a9a;
+}
+
+.success-message {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #a5d6a7;
+}
+
+

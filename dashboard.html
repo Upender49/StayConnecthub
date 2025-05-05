@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Management Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <!-- <img src="../imageslogo.webp" alt="Logo" class="logo"> -->
+                <h2>Stay Connect</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="#overview" data-section="overview">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Overview</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#bookings" data-section="bookings">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Bookings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#rooms" data-section="rooms">
+                            <i class="fas fa-bed"></i>
+                            <span>Room Management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#revenue" data-section="revenue">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span>Revenue Analytics</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#notifications" data-section="notifications">
+                            <i class="fas fa-bell"></i>
+                            <span>Notifications</span>
+                            <span class="notification-badge">5</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#settings" data-section="settings">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Navigation Bar -->
+            <header class="top-bar">
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search bookings, rooms, or guests...">
+                </div>
+                <div class="user-controls">
+                    <button class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div class="notifications-dropdown">
+                        <button class="notifications-btn">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge">5</span>
+                        </button>
+                        <div class="notifications-panel">
+                            <div class="notifications-header">
+                                <h3>Notifications</h3>
+                                <button class="mark-all-read">Mark all as read</button>
+                            </div>
+                            <div class="notifications-list">
+                                <!-- Notifications will be dynamically added here -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-profile">
+                        <img src="../images/profile.jpg" alt="Profile" class="profile-img">
+                        <div class="user-info">
+                            <span class="user-name">John Doe</span>
+                            <span class="user-role">Hostel Owner</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Overview Section -->
+            <section id="overview" class="dashboard-section active">
+                <div class="section-header">
+                    <h1>Dashboard Overview</h1>
+                    <div class="date-range">
+                        <button class="active">Today</button>
+                        <button>Week</button>
+                        <button>Month</button>
+                        <button>Year</button>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-bed"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Total Rooms</h3>
+                            <p class="stat-value">24</p>
+                            <p class="stat-change positive">
+                                <i class="fas fa-arrow-up"></i>
+                                +2 this month
+                            </p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Active Bookings</h3>
+                            <p class="stat-value">18</p>
+                            <p class="stat-change positive">
+                                <i class="fas fa-arrow-up"></i>
+                                +5 this week
+                            </p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Monthly Revenue</h3>
+                            <p class="stat-value">$12,450</p>
+                            <p class="stat-change positive">
+                                <i class="fas fa-arrow-up"></i>
+                                +15% from last month
+                            </p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Average Rating</h3>
+                            <p class="stat-value">4.8</p>
+                            <p class="stat-change positive">
+                                <i class="fas fa-arrow-up"></i>
+                                +0.2 this month
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-grid">
+                    <div class="recent-bookings">
+                        <div class="section-header">
+                            <h2>Recent Bookings</h2>
+                            <button class="view-all">View All</button>
+                        </div>
+                        <div class="bookings-list">
+                            <!-- Booking items will be dynamically added here -->
+                        </div>
+                    </div>
+                    <div class="calendar-view">
+                        <div class="section-header">
+                            <h2>Calendar</h2>
+                            <div class="calendar-nav">
+                                <button class="prev-month">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <span class="month-year">April 2024</span>
+                                <button class="next-month">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="calendar">
+                            <!-- Calendar will be dynamically generated -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="revenue-chart">
+                    <div class="section-header">
+                        <h2>Revenue Analytics</h2>
+                        <div class="chart-controls">
+                            <button class="active">Daily</button>
+                            <button>Weekly</button>
+                            <button>Monthly</button>
+                        </div>
+                    </div>
+                    <canvas id="revenueChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Other Sections -->
+            <section id="bookings" class="dashboard-section">
+                <!-- Bookings content will be loaded here -->
+            </section>
+
+            <section id="rooms" class="dashboard-section">
+                <!-- Rooms content will be loaded here -->
+            </section>
+
+            <section id="revenue" class="dashboard-section">
+                <!-- Revenue content will be loaded here -->
+            </section>
+
+            <section id="notifications" class="dashboard-section">
+                <!-- Notifications content will be loaded here -->
+            </section>
+
+            <section id="settings" class="dashboard-section">
+                <!-- Settings content will be loaded here -->
+            </section>
+
+            <section class="revenue-analytics">
+                <div class="section-header">
+                    <h2>Revenue Analytics</h2>
+                    <div class="chart-controls">
+                        <button class="active" data-period="monthly">Monthly</button>
+                        <button data-period="weekly">Weekly</button>
+                        <button data-period="daily">Daily</button>
+                    </div>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Total Revenue</h3>
+                            <p class="stat-value">$124,563.00</p>
+                            <p class="stat-change positive">+12.5% <i class="fas fa-arrow-up"></i></p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Average Revenue</h3>
+                            <p class="stat-value">$41,521.00</p>
+                            <p class="stat-change positive">+8.3% <i class="fas fa-arrow-up"></i></p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-percentage"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Growth Rate</h3>
+                            <p class="stat-value">15.2%</p>
+                            <p class="stat-change positive">+2.1% <i class="fas fa-arrow-up"></i></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-grid">
+                    <div class="revenue-breakdown">
+                        <h3>Revenue Breakdown</h3>
+                        <div class="breakdown-list">
+                            <div class="breakdown-item">
+                                <div class="breakdown-info">
+                                    <h4>Room Bookings</h4>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                                <div class="breakdown-value">$93,422.25</div>
+                            </div>
+                            <div class="breakdown-item">
+                                <div class="breakdown-info">
+                                    <h4>Services</h4>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 15%"></div>
+                                    </div>
+                                </div>
+                                <div class="breakdown-value">$18,684.45</div>
+                            </div>
+                            <div class="breakdown-item">
+                                <div class="breakdown-info">
+                                    <h4>Other Income</h4>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 10%"></div>
+                                    </div>
+                                </div>
+                                <div class="breakdown-value">$12,456.30</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="revenue-forecast">
+                        <h3>Revenue Forecast</h3>
+                        <div class="date-range">
+                            <button class="active">3 Months</button>
+                            <button>6 Months</button>
+                            <button>1 Year</button>
+                        </div>
+                        <div class="forecast-chart">
+                            <canvas id="forecastChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../scripts/dashboard.js"></script>
+</body>
+</html> 
